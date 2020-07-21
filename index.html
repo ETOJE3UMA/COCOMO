@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Basic COCOMO</title>
+    <link rel="stylesheet" href="css/mine.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload ="InitStartValue()">
+    
+
+    <header>
+        <ul>
+          <li class="active"><a href="#basicCocomo">Базовый уровень (Basic COCOMO)</a></li>
+          <li><a href="inter.html">Промежуточный уровень (Intermediate COCOMO)</a></li>
+          <li><a href="early.html">COCOMO 2 (Early Design)</a></li>
+          <li><a href="post.html">COCOMO 2 (Post Architecture)</a></li>
+        </ul>
+    </header>
+    
+    <div class="header_title"><h2 class="title">BASIC COCOMO</h2></div>
+    
+    <section id="basicCocomo">
+    
+    	<div class="write_number_container">
+    		<h3>Введите объем программного продукта в тысячах строк исходного текста</h3>
+    		<input type="range" min="1" max="100" id="r1" oninput="showR1()">
+    		<p id="one">x тыс. строк</p>
+    	</div>
+    	<div class="choose_method">
+    	    <h3>Выберите метод:</h3>
+    	    <ul class="methods">
+    	        <li class="method" onclick="main(1)" >Распространенный</li>
+    	        <li class="method" onclick="main(2)" >Полунезависимый</li>
+    	        <li class="method" onclick="main(3)" >Встроенный</li>
+    	    </ul>
+    	</div>
+    	<div id="res" class="result">
+    	    <h3>Результат:</h3>
+    	    <div class="beauty" id="resPM"> </div> <!-- js compile -->
+            <div class="beauty" id="resTM"> </div> <!-- js compile -->
+    	</div>
+    </section>
+    
+    <footer>
+        <span> <a href="Info1.pdf" target="_blank"> Справка </a></span>
+        <span class="info_about_us">Выполнили студенты ТУСУРа факультета систем управления в рамках рабочей задачи по дисциплине "Программная инженерия" Меденцева Анастасия и Птухина Валерия</span>
+        <span>©Меденцева А. В. и Птухина В. Н. 2019 г.</span>
+    </footer>
+    
+    <script src="js/core.js"></script>
+</body>
+
+</html>

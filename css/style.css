@@ -1,0 +1,354 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-family: 'Poiret One', cursive;
+	color: black;
+}
+
+body {
+	background-color: #f6f7f8 ;
+	font-size: 17pt;
+}
+
+header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	font-size: 20px;
+	border-bottom: 1px solid black;
+	background-color: #DEFFF3;
+}
+
+select {
+	width: 100%;
+	font-size: 12pt;
+}
+
+#showDisplay {
+	position: relative;
+	border: 1px solid white;
+	border-radius: 30px;
+	width: 300px;
+	text-align: center;
+	margin-bottom: 1px;
+	background-color: #2b9bf3;
+	color: white;
+}
+
+#hideDisplay {
+	position: relative;
+	border: 1px solid white;
+	border-radius: 30px;
+	width: 300px;
+	text-align: center;
+	margin-bottom: 1px;
+	background-color: #2b9bf3;
+	color: white
+}
+
+#choiceMethodTwo {
+	border: 1px solid black;
+	position: relative;
+	padding: 10px;
+	margin-top: 5px;
+	border-radius: 50px;
+	width: 400px;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.infoTable {
+	position: relative;
+	right: 250px;
+	font-size: 14pt;
+}
+
+footer {
+	position: relative;
+	background-color: #DEFFF3;
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 120px;
+	border-top: 1px solid black;
+}
+
+.taskOneTwo {
+	position: relative;
+	padding-bottom: 10px;
+	margin-left: 45%;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.taskOneTwo a p:hover {
+	color: #2b9bf3;
+}
+
+.taskfoo {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 24px;
+}
+
+.taskOne {
+	position: relative;
+	margin-left: 10%;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.taskN {
+	position: relative;
+	margin-left: 15px;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.taskOne a p {
+	color: black;
+}
+
+.taskOne a p:hover {
+	color: #2b9bf3;
+}
+
+.taskN a p {
+	color: black;
+}
+
+.taskN a p:hover {
+	color: #2b9bf3;
+}
+
+.taskcon {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#choiceMethod {
+	position: relative;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid black;
+	border-radius: 50px;
+	width: 400px;
+	height: 200px;
+	text-align: center;
+}
+
+.method {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.method:hover {
+	background-color: #FAC0AF;
+	border: 1px;
+	border-radius:50px;
+	cursor: pointer;
+}
+
+.methods {
+	padding-top: 10px;
+}
+
+#res { 
+	position: relative;
+	margin-top: 5px;
+	border: 1px solid rgb(136, 4, 4);
+	border-radius: 50px;
+	width: 420px;
+	text-align: center;
+}
+
+table {
+
+	border: 1px solid grey;
+	border-collapse: collapse;
+}
+
+th { 
+	border: 1px solid grey;
+}
+
+td {
+	border: 1px solid grey;
+}
+
+.task {
+	position: relative;
+	margin-left: 10%;
+	padding: 10px;
+	max-width: 60%;
+}
+
+#task1 {
+	padding-bottom: 25px;
+}
+
+@media screen and (max-width: 1280px) {
+	header {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 120px;
+		background-color: rgb(245, 245, 245);
+		border-bottom: 1px solid black;
+	}
+
+	table {
+		font-size: 11pt;
+	}
+
+	#taskOne {
+		position: relative;
+		margin-left: 5%;
+		margin-top: 15px;
+		display: inline-block;
+	}
+}
+
+.active {
+	border-bottom: 1px solid #2b9bf3;
+}
+
+.choiced {
+	position: relative;
+	left: 60px;
+	bottom: 20px;
+	background-color: #FAC0AF;
+	border: 1px;
+	border-radius:50px;
+	width: 300px;
+}
+
+@media screen and (max-width: 800px) {
+	header {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 210px;
+		background-color: rgb(245, 245, 245);
+		border-bottom: 1px solid black;
+	}
+
+	.taskN {
+		position: relative;
+		margin-left: 10%;
+		margin-top: 15px;
+		width: 400px;
+		display: inline-block;
+	}
+
+	.infoTable {
+		position: relative;
+		font-size: 5pt;
+	}
+}
+
+/* Стиль ранге */
+
+input[type=range] {
+  height: 26px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 400px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #50555C;
+  background: #50555C;
+  border-radius: 14px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 40px;
+  border-radius: 12px;
+  background: #529DE1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #50555C;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #50555C;
+  background: #50555C;
+  border-radius: 14px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 40px;
+  border-radius: 12px;
+  background: #529DE1;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #50555C;
+  border: 0px solid #000000;
+  border-radius: 28px;
+  box-shadow: 1px 1px 1px #50555C;
+}
+input[type=range]::-ms-fill-upper {
+  background: #50555C;
+  border: 0px solid #000000;
+  border-radius: 28px;
+  box-shadow: 1px 1px 1px #50555C;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 40px;
+  border-radius: 12px;
+  background: #529DE1;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #50555C;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #50555C;
+}

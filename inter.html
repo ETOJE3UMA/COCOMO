@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Intermediate COCOMO</title>
+    <link rel="stylesheet" href="css/mine.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload ="InitStartValue()">
+
+    <header>
+        <ul>
+          <li class="active"><a href="index.html">Базовый уровень (Basic COCOMO)</a></li>
+          <li><a href="#">Промежуточный уровень (Intermediate COCOMO)</a></li>
+          <li><a href="early.html">COCOMO 2 (Early Design)</a></li>
+          <li><a href="post.html">COCOMO 2 (Post Architecture)</a></li>
+        </ul>
+    </header>
+    
+    <div class="header_title"><h2 class="title">INTERMEDIATE COCOMO</h2></div>
+       
+    <section class="inter_cocomo">
+      
+       <div class="write_number_container">
+    		<h3>Введите объем программного продукта в тысячах строк исходного текста</h3>
+    		<input type="range" min="1" max="100" id="r1" oninput="showR1()">
+    		<p id="one">x тыс. строк</p>
+       </div>
+
+        <table>
+				<tr class="table_title"><th colspan="8">Выберите необходимые характеристики</th></tr>
+				<tr><th rowspan="2">Атрибуты стоимости</th>
+				<tr><th colspan="8">Характеристики продукта</th></tr>
+				<tr id="tr1"><th>Требуемая надежность ПО</th> <td colspan="6"><select id="sel1" onchange="getValue()"><option value="0.75">Очень низкий</option> <option value="0.88">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="1.15">Высокий</option> <option value="1.4">Очень высокий</option></select></td></tr>
+				<tr><th>Размер БД приложения</th> <td colspan="6"><select id="sel2" onchange="getValue()"><option value="0.94">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="1.08">Высокий</option> <option value="1.16">Очень высокий</option></select></td></tr>
+				<tr><th>Сложность продукта</th> <td colspan="6"><select id="sel3" onchange="getValue()"><option value="0.7">Очень низкий</option> <option value="0.85">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="1.15">Высокий</option> <option value="1.3">Очень высокий</option> <option value="1.65">Критический</option></select></td></tr>
+				<tr class="table_title"><th colspan="8">Характеристики аппаратного обеспечения</th></tr>
+				<tr><th>Ограничения быстродействия при выполнении программы</th> <td colspan="6"><select id="sel4" onchange="getValue()"><option selected="selected" value="1">Средний</option> <option value="1.11">Высокий</option> <option value="1.3">Очень высокий</option> <option value="1.66">Критический</option></select></td></tr>
+				<tr><th>Ограничения памяти</th> <td colspan="6"><select id="sel5" onchange="getValue()"><option selected="selected" value="1">Средний</option> <option value="1.06">Высокий</option> <option value="1.21">Очень высокий</option> <option value="1.56">Критический</option></select></td> </tr>
+				<tr><th>Неустойчивость окружения виртуальной машины</th> <td colspan="6"><select id="sel6" onchange="getValue()"> <option value="0.87">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="1.15">Высокий</option> <option value="1.3">Очень высокий</option></select></td> </tr>
+				<tr><th>Требуемое время восстановления</th><td colspan="6"><select id="sel7" onchange="getValue()"> <option value="0.87">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="1.07">Высокий</option> <option value="1.15">Очень высокий</option></select></td> </tr>
+				<tr class="table_title"><th colspan="8">Характеристики персонала</th></tr>
+				<tr><th>Аналитические способности</th> <td colspan="6"><select id="sel8" onchange="getValue()"><option value="1.46">Очень низкий</option> <option value="1.19">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.86">Высокий</option> <option value="0.71">Очень высокий</option></select></td> </tr>
+				<tr><th>Опыт разработки</th> <td colspan="6"><select id="sel9" onchange="getValue()"><option value="1.29">Очень низкий</option> <option value="1.13">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.91">Высокий</option> <option value="0.82">Очень высокий</option></select></td></tr>
+				<tr><th>Способности к разработке ПО</th> <td colspan="6"><select id="sel10" onchange="getValue()"><option value="1.42">Очень низкий</option> <option value="1.17">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.86">Высокий</option> <option value="0.7">Очень высокий</option></select></td> </tr>
+				<tr><th>Опыт использования виртуальных машин</th><td colspan="6"><select id="sel11" onchange="getValue()"><option value="1.21">Очень низкий</option> <option value="1.1">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.9">Высокий</option></select></td></tr>
+				<tr><th>Опыт разработки на языках программирования</th> <td colspan="6"><select id="sel12" onchange="getValue()"><option value="1.14">Очень низкий</option> <option value="1.07">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.95">Высокий</option></select></td> </tr>
+				<tr class="table_title"><th colspan="8">Характеристики проекта</th></tr>
+				<tr><th>Применение методов разработки ПО</th><td colspan="6"><select id="sel13" onchange="getValue()"><option value="1.24">Очень низкий</option> <option value="1.1">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.91">Высокий</option> <option value="0.82">Очень высокий</option></select></td> </tr>
+				<tr><th>Использование инструментария разработки ПО</th> <td colspan="6"><select id="sel14" onchange="getValue()"><option value="1.24">Очень низкий</option> <option value="1.1">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="0.91">Высокий</option> <option value="0.83">Очень высокий</option></select></td> </tr>
+				<tr><th>Требования соблюдения графика разработки</th> <td colspan="6"><select id="sel15" onchange="getValue()"><option value="1.23">Очень низкий</option> <option value="1.08">Низкий</option> <option selected="selected" value="1">Средний</option> <option value="1.04">Высокий</option> <option value="1.1">Очень высокий</option></select></td></tr>
+			</table> 
+			
+			
+    </section>
+    
+    <div class="method_inter">
+			<div class="choose_method">
+    	        <h3>Выберите метод:</h3>
+    	        <ul class="methods">
+    	            <li class="method" onclick="coreCalc(1)" >Распространенный</li>
+    	            <li class="method" onclick="coreCalc(2)" >Полунезависимый</li>
+    	            <li class="method" onclick="coreCalc(3)" >Встроенный</li>
+    	        </ul>
+    	    </div>
+    	    
+    </div>
+    <div class="result_inter">
+    <div id="res" class="result">
+    	        <h3>Результат:</h3>
+    	        <div class="beauty" id="resPM"> </div> <!-- js compile -->
+                <div class="beauty" id="resTM"> </div> <!-- js compile -->
+    	    </div>
+    </div>
+    <footer>
+        <span> <a href="Info1.pdf" target="_blank"> Справка </a></span>
+        <span class="info_about_us">Выполнили студенты ТУСУРа факультета систем управления в рамках рабочей задачи по дисциплине "Программная инженерия" Меденцева Анастасия и Птухина Валерия</span>
+        <span>©Меденцева А. В. и Птухина В. С. 2019 г.</span>
+    </footer>
+    
+    <script src="js/core.js"></script>
+</body>
+
+</html>
